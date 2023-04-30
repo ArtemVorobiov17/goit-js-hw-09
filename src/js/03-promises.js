@@ -11,7 +11,7 @@ function onSubmit(evt) {
   const step = Number(form.step.value);
   const amount = Number(form.amount.value);
   
-  for (i = 0; i < amount; i += 1) {
+  for (let i = 0; i < amount; i += 1) {
     createPromise(i, delay + (i * step))
       .then(({ position, delay }) => {
         console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);

@@ -12,11 +12,12 @@ const startColor = () => {
         body.style.background = getRandomHexColor();
     }, 1000);
     startButton.setAttribute('disabled', 'disabled');
-    stopButton.removeAttribute('disabled');
+    stopButton.removeAttribute('disabled' );
 };
 
 const stopColor = () => {
     startButton.removeAttribute('disabled');
+    stopButton.setAttribute('disabled', 'disabled');
     clearInterval(interval);
 };
 
